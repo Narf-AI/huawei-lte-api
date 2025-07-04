@@ -1,0 +1,39 @@
+[package]
+name = "huawei-dongle-api"
+version = "0.2.0"
+edition = "2021"
+authors = ["Narf sp. z o.o. <info@narf.ai>"]
+description = "Async Rust library for interacting with Huawei LTE dongles"
+readme = "README.md"
+homepage = "https://github.com/Narf-AI/huawei-lte-api"
+repository = "https://github.com/Narf-AI/huawei-lte-api"
+license = "MIT OR Apache-2.0"
+keywords = ["huawei", "lte", "dongle", "hilink", "api"]
+categories = ["api-bindings", "network-programming", "asynchronous"]
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs"]
+
+[dependencies]
+tokio = { version = "1", features = ["full"] }
+reqwest = { version = "0.11", features = ["cookies", "json", "rustls-tls"], default-features = false }
+serde = { version = "1.0", features = ["derive"] }
+serde-xml-rs = "0.6"
+quick-xml = { version = "0.31", features = ["serialize"] }
+thiserror = "1.0"
+tracing = "0.1"
+async-trait = "0.1"
+url = "2.5"
+scraper = "0.18"
+regex = "1.10"
+base64 = "0.21"
+sha2 = "0.10"
+hex = "0.4"
+chrono = "0.4"
+fastrand = "2.0"
+
+[dev-dependencies]
+tokio-test = "0.4"
+mockito = "1.4"
+tracing-subscriber = "0.3"

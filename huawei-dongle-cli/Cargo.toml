@@ -1,0 +1,28 @@
+[package]
+name = "huawei-dongle-cli"
+version = "0.2.0"
+edition = "2021"
+authors = ["Narf sp. z o.o. <info@narf.ai>"]
+description = "Command-line interface for interacting with Huawei LTE dongles"
+readme = "README.md"
+homepage = "https://github.com/Narf-AI/huawei-lte-api"
+repository = "https://github.com/Narf-AI/huawei-lte-api"
+license = "MIT OR Apache-2.0"
+keywords = ["huawei", "lte", "dongle", "cli", "hilink"]
+categories = ["command-line-utilities", "network-programming"]
+
+[[bin]]
+name = "huawei-dongle-cli"
+path = "src/main.rs"
+
+[dependencies]
+huawei-dongle-api = "0.2.0"
+tokio = { version = "1", features = ["full"] }
+clap = { version = "4", features = ["derive"] }
+anyhow = "1.0"
+tracing = "0.1"
+tracing-subscriber = "0.3"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tabled = "0.15"
+chrono = "0.4"
